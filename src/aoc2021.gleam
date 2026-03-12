@@ -5,6 +5,7 @@ import gleam/result
 import argv
 
 import days/day01
+import days/day02
 import solution.{type Mode, Real, Test}
 
 pub fn main() -> Nil {
@@ -29,6 +30,13 @@ pub fn main() -> Nil {
     Ok(#(mode, 1)) -> {
       let part1 = day01.part1(mode)
       let part2 = day01.part2(mode)
+
+      io.println("Part 1 result: " <> solution.to_string(part1))
+      io.println("Part 2 result: " <> solution.to_string(part2))
+    }
+    Ok(#(mode, 2)) -> {
+      let part1 = day02.part1(mode)
+      let part2 = day02.part2(mode)
 
       io.println("Part 1 result: " <> solution.to_string(part1))
       io.println("Part 2 result: " <> solution.to_string(part2))
